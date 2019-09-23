@@ -1,33 +1,32 @@
-$(document).ready(function()) {
+$(document).ready(function() {
   $("#questions").submit(function(event) {
     event.preventDefault();
     $("#lingo").show();
     var result = parseInt($("input:radio[name=question1]:checked").val());
-     result += parseInt($("input:radio[name=question1]:checked").val());
-      result += parseInt($("input:radio[name=question1]:checked").val());
+    result += parseInt($("input:radio[name=question2]:checked").val());
+    result += parseInt($("input:radio[name=question3]:checked").val());
+    result += parseInt($("input:radio[name=question4]:checked").val());
+          console.log(result)
 
-      if ($("input:radio[name=logic]:checked").val() === "simple")
-      if (result >= 3) {
-        $(".GO").show();
-      }
-      else if (result < 3 && result > -3) {
-        $(".Ruby").show();
-      }
-      else {
-          $(".Javascript").show();
-      }
+    if (result >= 5) {
+      $(".GO").show();
     }
-    else if ($("input:radio[name=logic]:checked").val() === "complex") {
-      if (result >= 3).show();
+
+    else if (result < 5 && result > 2) {
+      $(".Ruby").show();
     }
-    else if (result < 3 && result > -3) {
+
+    else if (result <= 2 && result >= -2){
+      $(".Javascript").show();
+    }
+
+    else if (result <-2 && result > -5) {
       $(".c++").show();
     }
+
     else {
       $(".python").show();
-    }
-    else {
-      $(".nothing").show();
+      console.log(result)
     }
   });
 });

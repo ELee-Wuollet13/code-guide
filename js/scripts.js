@@ -5,6 +5,7 @@ $(document).ready(function() {
     result += parseInt($("input:radio[name=question2]:checked").val());
     result += parseInt($("input:radio[name=question3]:checked").val());
     result += parseInt($("input:radio[name=question4]:checked").val());
+    result += parseInt($("input:radio[name=question5]:checked").val());
     console.log(result)
 
     if (result >= 5) {

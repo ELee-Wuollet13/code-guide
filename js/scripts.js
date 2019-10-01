@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#questions").submit(function(event) {
+    $(".hidden").hide();
     $("#answers").show();
     var result = parseInt($("input:radio[name=question1]:checked").val());
     result += parseInt($("input:radio[name=question2]:checked").val());
